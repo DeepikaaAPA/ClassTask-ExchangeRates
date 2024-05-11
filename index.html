@@ -19,18 +19,18 @@
         text-align: left;
         background-color: rgb(14, 89, 118);
         color: white;
-        height: 70px;
+        height: 40px;
       }
     </style>
   </head>
   <body>
     <div class="container border text-center m-5">
       <label> Currency :</label>
-      <input type="text" name="cc" value="" id="cc" />
+      <input type="text" name="cc" value="USD" id="cc" />
       <button type="submit" class="btn btn-success m-5" onclick="findExRates()">
         Find !
       </button>
-      <div class="m-2 p-5 row border border-success" id="result"></div>
+      <div class="m-2 row border border-success" id="result"></div>
     </div>
     <script src="exchangerate.js"></script>
   </body>

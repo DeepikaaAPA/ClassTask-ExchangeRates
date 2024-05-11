@@ -13,11 +13,9 @@ async function findExRates() {
     let ex_rates = await (await fetch(url)).json();
     document.getElementById(
       "result"
-    ).innerHTML = `<div class="col-4">India : ${ex_rates.conversion_rates.INR}</div><div class="col-4"> US : ${ex_rates.conversion_rates.USD}</div><div class="col-4">AED : ${ex_rates.conversion_rates.AED}</div>`;
+    ).innerHTML = `<div class="col-4 p-2  border border-light">India : ${ex_rates.conversion_rates.INR}</div><div class="col-4 p-2  border border-light"> US : ${ex_rates.conversion_rates.USD}</div><div class="col-4 p-2 border border-light">AED : ${ex_rates.conversion_rates.AED}</div>`;
   } catch (e) {
-    document.getElementById(
-        "result"
-      ).innerHTML ="Invalid code"
+    document.getElementById("result").innerHTML = "Invalid code";
   }
 }
 findExRates();
